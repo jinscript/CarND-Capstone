@@ -54,6 +54,8 @@ class TLDetector(object):
         self.waypoints_2d = None
         self.waypoint_tree = None
 
+        self.has_image = False
+
         rospy.spin()
 
     def pose_cb(self, msg):
@@ -122,8 +124,11 @@ class TLDetector(object):
             int: ID of traffic light color (specified in styx_msgs/TrafficLight)
 
         """
-        return light.state
-        if(not self.has_image):
+        # return state in simulator
+        if not self.config["is_site"]:
+            return light.state
+
+        if not self.has_image:
             self.prev_light_loc = None
             return False
 
