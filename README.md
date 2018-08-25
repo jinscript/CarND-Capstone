@@ -6,7 +6,7 @@ Author: Jin Sun ([sunjin19901030@gmail.com](sunjin19901030@gmail.com))
 
 ### System Architecture
 
-[Architecture](imgs/final-project-ros-graph-v2.png)
+![Architecture](imgs/final-project-ros-graph-v2.png)
 
 ### Traffic Light Detection
 
